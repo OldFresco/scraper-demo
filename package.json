@@ -6,9 +6,10 @@
     "scripts": {
         "scrape-argon": "node scraper.js",
         "start": "node app.js",
+        "tasks": "gulp",
         "browser": "start http://localhost:8888",
         "in-browser": "concurrently \"npm run start\" \"npm run browser\"",
-        "all": "npm run scrape-argon && npm run in-browser"
+        "all": "npm run scrape-argon && npm run tasks && npm run in-browser"
     },
     "author": "",
     "license": "ISC",
@@ -17,5 +18,9 @@
         "concurrently": "^3.1.0",
         "express": "^4.14.0",
         "website-scraper": "^1.2.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-replace": "^0.5.4"
     }
 }
