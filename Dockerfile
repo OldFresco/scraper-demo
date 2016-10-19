@@ -14,7 +14,6 @@ COPY . /usr/src/app
 # Run build pipeline
 RUN npm run scrape-argon
 RUN npm run tasks
-RUN npm run start
 
 EXPOSE 8888
 CMD [ "npm", "start" ]
