@@ -1,18 +1,21 @@
 {
-  "name": "nodefoo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "node scraper.js",
-    "start": "node app.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cli-spinner": "^0.2.5",
-    "express": "^4.14.0",
-    "website-scraper": "^1.2.0"
-  }
+    "name": "nodefoo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "scrape-argon": "node scraper.js",
+        "start": "node app.js",
+        "browser": "start http://localhost:8888",
+        "in-browser": "concurrently \"npm run start\" \"npm run browser\"",
+        "all": "npm run scrape-argon && npm run in-browser"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cli-spinner": "^0.2.5",
+        "concurrently": "^3.1.0",
+        "express": "^4.14.0",
+        "website-scraper": "^1.2.0"
+    }
 }
